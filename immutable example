@@ -1,0 +1,107 @@
+package immutablelms;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+enum Currency{Doller,Rupee,Yen};	
+enum Department{Sales,Marketing,Production};	
+	
+
+
+
+final class Company {
+	private String companyname;
+	private int registernumber;
+	public List<Employee> elist; 
+	
+	
+	
+	Company(String companyname,int registrationnumber){
+		this.companyname=companyname;
+		this.registernumber=registrationnumber;
+	}
+	public String getCompanyname() {
+		return companyname;
+	}
+	public int getRegisternumber() {
+		return registernumber;
+	}
+	
+	public Employee registerEmployee()
+	{
+		return new Employee();
+	}
+}
+class Employee
+{
+	private StringBuilder empName;
+	private Currency salaryType;
+	private float salary;
+	
+	public List<Employee>elist;
+	public int EmpCode;
+	
+	public StringBuilder getEmpName() {
+		return empName;
+	}
+	
+	public void setEmpName(StringBuilder empName) {
+		this.empName = empName;
+	}
+	public void setEmpCode(int EmpCode) {
+		this.EmpCode = EmpCode;
+	}
+	public int getEmpCode() {
+	return EmpCode;
+	}
+	
+	public Currency getSalaryType() {
+		return salaryType;
+	}
+	public void setSalaryType(Currency salaryType) {
+		this.salaryType = salaryType;
+	}
+	public float getSalary() {
+		return salary;
+	}
+	public void setSalary(float salary) {
+		this.salary = salary;
+	}
+}
+public class Myimmutable
+{
+
+	public static void main(String[] args) throws IOException
+	
+	{
+		 char reply;
+
+		Company c1=new Company("hcl",12345);
+		Company c2=c1;
+		c2=new Company("wipro",99999);
+		
+		System.out.println("company:"+c1.getCompanyname()+"registeration number"+c1.getRegisternumber());
+		System.out.println("company:"+c2.getCompanyname()+"registeration number"+c2.getRegisternumber());
+		c1.elist=new ArrayList<Employee>();
+		do{
+		Employee e=c1.registerEmployee();
+		System.out.println("enter empcode:");
+	
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in) );
+	e. setEmpCode(Integer.parseInt(br.readLine()));
+	System.out.println("enter ename");
+	e.setEmpName(new StringBuilder(br.readLine()));
+	
+	c1.elist.add(e);
+	System.out.println("wish to add more(y/n)");
+	 reply = br.readLine().toLowerCase().charAt(0);
+	
+		}while(reply=='y');
+for(Employee emp : c1.elist)	
+{
+	System.out.println(emp.getEmpCode()+"\t"+emp.getEmpName());
+}
+		} 
+	}
