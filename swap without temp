@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Swap {
+ public static void main(String[] args) {
+	 System.out.println("Before Swapping");
+Scanner sc=new Scanner(System.in);
+		  int x = sc.nextInt();
+		  System.out.println("Value of x is :" + x);
+		  int y = sc.nextInt();
+		  System.out.println("Value of y is :" + y);  
+		  x = x + y;
+		  y = x - y;
+		  x = x - y;
+		  System.out.println("after Swapping");
+		  System.out.println("Value of x is :" + x);
+		  System.out.println("Value of y is :" + y);
+		 }
+		}
