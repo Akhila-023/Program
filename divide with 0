@@ -1,0 +1,28 @@
+package myexception;
+
+public class Dividewithcare {
+
+	public static void main(String[] args) {
+		int a,b,c=0;
+		
+try{
+a=Integer.parseInt(args[0]);		
+b=Integer.parseInt(args[1]);
+                
+
+
+ c=a/b;
+}catch(ArithmeticException ae)
+{
+	System.out.println("we can not divide with 0");
+}
+catch(NumberFormatException ne)
+{
+System.out.println("not alphbet");
+}
+System.out.println("result="+c);
+		
+
+	}
+
+}
