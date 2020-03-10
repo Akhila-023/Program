@@ -1,0 +1,41 @@
+package innerclass;
+
+import java.util.Arrays;
+import java.util.Collections; 
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+public class Arraysort {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		// TODO Auto-generated method stub
+		int marks[]={78,65,88};
+		float submarks[]=new float[3];
+		String subjects[]={"maths","physics","chemistry"};
+		int i=0;
+		for(int mark:marks){
+			System.out.println(subjects[i]+"."+mark);
+			i++;
+			
+		}
+  Arrays.sort(marks);
+  System.out.println("after sort");
+  for(int mark:marks)
+	  System.out.println(mark);
+ System.out.println("marks in reverse");
+ for(int l=marks.length-1;l>=0;l--)
+ {
+	 System.out.println(marks[l]);
+ }
+ BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	
+	for(i=0;i<submarks.length;i++)
+	{
+	submarks[i]=Float.parseFloat(br.readLine());
+	}
+	for(float sm:submarks)
+	{
+		System.out.println(sm);
+	}
+}
+}
