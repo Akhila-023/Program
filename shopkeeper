@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class Shopkeeper {
+	public static void main(String args[])
+	{
+		byte productcode;
+		float price1=22.50f;
+		float price2=44.10f;
+		float price3=99.8f;
+		float result;
+		for(int i=0;i<3;i++){
+		System.out.println("enter product");
+		Scanner sc=new Scanner(System.in);
+		productcode=sc.nextByte();
+		System.out.println(productcode);
+		System.out.println("enter quantitysold");
+		int quantitysold=sc.nextInt();
+		System.out.println(quantitysold);
+		switch(productcode)
+		{
+		case 1:
+			double m=price1*quantitysold;
+			System.out.println(m);
+			break;
+		case 2:
+			double n=price2*quantitysold;
+			System.out.println(n);
+			break;
+		case 3:
+			double o=price3*quantitysold;
+			System.out.println(o);
+	default:
+		System.out.println("default");
+			
+		}
+		}
+		
+		result=price1+price2+price3;
+		System.out.println(result);
+		
+		
+	}
+
+}
