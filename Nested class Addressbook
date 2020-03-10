@@ -1,0 +1,51 @@
+package nestedclass;
+class Address
+{
+	String name;
+	String Ptaddress;
+int phnnum;
+	public String getName() {
+		return "aki";
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPtaddress() {
+		return "gudivada";
+	}
+	public void setPtaddress(String ptaddress) {
+		Ptaddress = ptaddress;
+	}
+	public int getPhnnum() {
+		return 91000000;
+	}
+	public void setPhnnum(int phnnum) {
+		this.phnnum = phnnum;
+	}
+
+class Add
+{
+	String email;
+
+	public String getEmail() {
+		return "g.akhila023@gmail.com";
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+}
+}
+public class Addressbook {
+	public static void main(String args[])
+	{
+		Address ad=new Address();
+		Address.Add ae=ad.new Add();
+	System.out.println("Name   "+ad.getName()+"Address:" +ad.getPtaddress()+"phone number: " +ad.getPhnnum() );
+	System.out.println("email:"+ae.getEmail());
+	
+		
+	}
+
+ 
+}
