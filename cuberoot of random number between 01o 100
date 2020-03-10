@@ -1,0 +1,18 @@
+import java.util.Random; 
+
+	public class Randomnum{ 
+	  
+	    public static void main(String args[]) 
+	    { 
+	     
+	    	Random obj = new Random();
+            for (int iCount = 0; iCount< 10; iCount++){
+              int randomNumber = obj.nextInt(100);
+              System.out.println("Random No : " + randomNumber); 
+              System.out.println("Random No ceil: " +Math.ceil( randomNumber)); 
+              System.out.println("Random Nofloor : " + Math.floor(randomNumber)); 
+              
+             }
+
+}
+	}
