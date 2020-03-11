@@ -1,0 +1,30 @@
+package myio;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class Readobject {
+
+	public static void main(String[] args) throws IOException
+	{
+		// TODO Auto-generated method stub
+		Student student;
+		File file=new File("C:\\Users\\TSSVJW-training1\\Desktop\\student.txt" );
+		FileInputStream fis=new FileInputStream(file);
+		ObjectInputStream ois=new ObjectInputStream(fis);
+		try
+		{
+			student=(Student) ois.readObject();
+			System.out.println("student data from file");
+			System.out.println(student.getStudentId()+":"+student.getStudentname());
+		}catch(ClassNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}
