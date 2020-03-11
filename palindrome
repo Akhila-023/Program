@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Command {
+	public static void main(String args[])
+	{
+		try
+		{
+		System.out.println("enter name" +args[0]);
+		}
+		catch(ArrayIndexOutOfBoundsException ae)
+		{
+			System.out.println("array");
+		}
+		System.out.println("enter name:");
+		Scanner sc=new Scanner(System.in); 
+		String se=sc.nextLine();
+		System.out.println(se);
+		StringBuffer sb=new StringBuffer(se);
+		
+		if(se.equals(sb.reverse().toString()))
+		{
+			System.out.println("palindrome" +se);
+		}
+		else
+		{
+			System.out.println("not palindrome" +se);
+		}
+	}
+	
+	
+
+}
