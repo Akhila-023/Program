@@ -1,0 +1,87 @@
+public class Arraylist {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//printing heterogeneous
+	List listofobjects=new ArrayList();
+	List<Integer>ranklist=new ArrayList();
+	List<String>departmentList=new Vector();
+	//add ranks to ranklist
+	ranklist.add(43);
+	ranklist.add(5);
+	ranklist.add(77);
+	ranklist.add(3);
+	//display rank list
+	for(Integer rank: ranklist)
+	{
+		System.out.println(rank);
+	}
+	Collections.sort(ranklist);
+	System.out.println("after sorting" +ranklist);
+	//add department
+  ((Vector) departmentList).addElement("operations");
+	 ((Vector) departmentList).addElement("sales");
+	 //DISPLAY DEPARTMENT
+	 Iterator deptitr=departmentList.iterator();
+	 System.out.println("departmentlist");
+	 while(deptitr.hasNext())
+		{
+	 System.out.println(deptitr.next()+"\t");
+		}
+	
+	
+	
+	
+		listofobjects.add(1);
+		listofobjects.add(2);
+		listofobjects.add(1);
+		listofobjects.add("Hindustan");
+		listofobjects.add("Aeronautics");
+		listofobjects.add("Limited");
+		listofobjects.add("Turnover: ");
+		listofobjects.add(10000000000L);
+		listofobjects.add("Dollars");
+		System.out.println(listofobjects);
+		listofobjects.remove(1);
+		System.out.println("after removal of 2nd element,collection in memory");
+		System.out.println(listofobjects);
+		listofobjects.remove(7);
+		if(listofobjects.contains("Dollars"))
+		{
+			System.out.println("turnover is in dollars");
+		}else
+		{
+			System.out.println("turnover is in rupees");
+		}
+		//using iterator
+		
+		Iterator itr=listofobjects.iterator();
+		while(itr.hasNext())
+		{
+			Object element=itr.next();
+			if(element instanceof String)
+			{
+				System.out.println(element+ " ");
+			}else if(element instanceof Long)
+			{
+				System.out.println(element);
+			}
+			else if(element instanceof Integer)
+			{
+				System.out.println("Integer"+element); 
+			}
+		}
+		//display collection for each
+		System.out.println("showing elements of arraylist");
+		for(Object o:listofobjects)
+		{
+			System.out.println(o);
+		}
+		
+		
+		
+		
+
+	}
+
+}
