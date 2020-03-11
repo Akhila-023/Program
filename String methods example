@@ -1,0 +1,23 @@
+public class Methodofstr {
+	public static void main(String args[])
+	{
+		String a="   HAI";
+		String b="welcome"; 
+		System.out.println(a.length());//6 output
+		System.out.println(b.indexOf("welcome"));//0
+		System.out.println(b.charAt(1));//e
+		System.out.println(a.replace("hai","welcome"));//welcome
+		System.out.println(a.toLowerCase());//hai
+		System.out.println(b.toUpperCase());//WELCOME
+		System.out.println(a.trim());//REMOVING SPACE
+		System.out.println(a.concat("how"));//HAIhow
+		System.out.println(a.isEmpty());//false
+		System.out.println(a.equals(b));//false
+		System.out.println(a.equalsIgnoreCase(b));//false
+		System.out.println(a.contains(b));//false
+		System.out.println(a.toCharArray());//HAI
+	
+		
+	}
+}
+
