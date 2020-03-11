@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Switchcolor {
+	    public static void main(String[] args) 
+	    { 
+	        int day; 
+	        String dayString; 
+	        System.out.println("enter day");
+	        Scanner sc=new Scanner(System.in);
+	        day=sc.nextInt();
+	        System.out.println(day);
+	  
+		        switch (day) { 
+	        case 1: 
+	            dayString = "Monday"; 
+	            System.out.println("white");
+	            break; 
+	        case 2: 
+	            dayString = "Tuesday"; 
+	            System.out.println("red");
+	            break; 
+	        case 3: 
+	            dayString = "Wednesday"; 
+	            System.out.println("green");
+	            break; 
+	        case 4: 
+	            dayString = "Thursday"; 
+	            System.out.println("yellow");
+	            break; 
+	        case 5: 
+	            dayString = "Friday"; 
+	            System.out.println("pink");
+	            break; 
+	        case 6: 
+	            dayString = "Saturday and sunday"; 
+	            System.out.println("not accepted");
+	            break; 
+	       default: 
+	            dayString = "Invalid day"; 
+	          }
+		        System.out.println(dayString); 
+	  }
+	    }
