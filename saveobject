@@ -1,0 +1,77 @@
+package myio;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class Bird
+{
+	private String birdName;
+	public String getBirdName() {
+		return birdName;
+	}
+	public void setBirdName(String birdName) {
+		this.birdName = birdName;
+	}
+	public String getBirdcolor() {
+		return birdcolor;
+	}
+	public void setBirdcolor(String birdcolor) {
+		this.birdcolor = birdcolor;
+	}
+	private String birdcolor;
+	public void fly(){}
+	public void walk(){}
+}
+class Student implements Serializable
+{
+	private int  studentId;
+	private String studentname;
+	public int getStudentId() {
+		return studentId;
+	}
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+	public String getStudentname() {
+		return studentname;
+	}
+	public void setStudentname(String studentname) {
+		this.studentname = studentname;
+	}
+	
+}
+public class Saveobject {
+
+	public static void main(String[] args)throws IOException
+	{
+		// TODO Auto-generated method stub
+Student s1=new Student();
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("enter student id");
+s1.setStudentId(Integer.parseInt(br.readLine()));
+System.out.println("enter student name");
+s1.setStudentname(br.readLine());
+ saveStudent(s1);
+
+	}
+
+	public static void saveStudent(Student s)throws IOException
+	{
+		// TODO Auto-generated method stub
+		File f=new File("C:\\Users\\TSSVJW-training1\\Desktop\\student1.txt");
+		FileOutputStream fos=new FileOutputStream(f);
+		ObjectOutputStream oos=new ObjectOutputStream(fos);
+		oos.writeObject(s);
+		System.out.println("sudents successt");
+		
+		
+		
+		
+	}
+
+}
