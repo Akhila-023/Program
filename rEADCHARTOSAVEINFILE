@@ -1,0 +1,32 @@
+package myio;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Read {
+
+	public static void main(String[] args) throws IOException{
+		// TODO Auto-generated method stub
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		char ch;
+		System.out.println("enter a character");
+       ch=br.readLine().charAt(0);
+File file=new File("//C:\\Users\\TSSVJW-training1\\Desktop\\studenot.txt");
+FileWriter fw =new FileWriter(file);
+fw.write((int)ch);
+String addingStringtoFile=br.readLine();
+CharSequence charsequence=addingStringtoFile;
+
+fw.append( "  ");
+fw.append(charsequence);
+fw.close();
+System.out.println("character saved successful");
+
+
+
+	}
+
+}
