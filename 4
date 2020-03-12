@@ -1,0 +1,23 @@
+package org;
+public class Palindrome{
+public static void main(String args[])
+{
+
+try
+{
+System.out.println(args[0]);;
+}catch(ArrayStoreException ae){
+	System.out.println("array exception");
+}
+	StringBuffer sb=new StringBuffer(args[0]);
+	
+	if(args[0].equals(sb.reverse().toString()))
+	{
+		System.out.println("palindrome" +args[0]);
+	}
+	else
+	{
+		System.out.println("not palindrome" +args[0]);
+	}
+}
+}
