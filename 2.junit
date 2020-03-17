@@ -1,0 +1,24 @@
+public class EmployeeBusinessLogic {
+	//calculate the yearly salary of an employee
+	public double calculateYearSalary(EmployeeDetails employeeDetails)
+	{
+		double yearlySalary=0;
+		return yearlySalary=12*employeeDetails.getMonthlysalary();
+		
+		
+	}
+	public double calculateAppraisal(EmployeeDetails employeeDetails)
+	{
+		double Appraisal=0;
+		if(employeeDetails.getMonthlysalary()<10000)
+		{
+			Appraisal=500;
+		}else
+		{
+			Appraisal=1000;
+			
+		}
+		return Appraisal;
+	}
+
+}
