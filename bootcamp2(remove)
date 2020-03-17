@@ -1,0 +1,37 @@
+import java.util.Arrays;
+
+public class Removeduplicate {
+	 
+	
+		 
+	    public static void main(String[] args) {
+	        int[] numArr = {10,4,5,4,8,10};
+	        System.out.println("Original Array- " + Arrays.toString(numArr));
+	        int[] tempArr = findAndRemoveDuplicates(numArr);
+	        
+	        System.out.println("After removing duplicates- " + Arrays.toString(tempArr));
+	    }
+	    
+	    public static int[] findAndRemoveDuplicates(int[] numArr){
+	        int size = numArr.length;
+	        for(int i = 0; i < size; i++){
+	            // for each element check for duplicates
+	            for(int j = i+1; j < size;){
+	                if(numArr[i] == numArr[j]){
+	                    // shift elements to the left to remove duplicate
+	                    for(int k = j; k < size-1; k++){
+	                        numArr[k] = numArr[k+1];
+	                    }
+	                    size = size - 1;
+	                }else{
+	                    j++;
+	                }
+	            }
+	        }
+	        // create temp array of reduced size
+	        int[] tempArray = new int[size];
+	        // copy array elements
+	        System.arraycopy(numArr, 0, tempArray, 0, size);
+	        return tempArray;
+	    }
+	}
