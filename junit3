@@ -1,0 +1,16 @@
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+public class TestEmployeeDetails {
+	EmployeeBusinessLogic empBusinessLogic =new 	EmployeeBusinessLogic();
+	EmployeeDetails employee =new EmployeeDetails();
+	@Test
+public void testCalculateAppraisal()
+{
+		employee.setName("akhila");
+		employee.setAge(23);
+		employee.setMonthlysalary(8000);
+		double appraisal=empBusinessLogic.calculateAppraisal(employee);
+		assertEquals(500,appraisal,0.0);
+}
+
+}
