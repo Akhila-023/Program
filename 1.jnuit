@@ -1,0 +1,24 @@
+//plain old java object class
+public class EmployeeDetails {
+private String Name;
+private float monthlysalary;
+private int age;
+public String getName() {
+	return Name;
+}
+public void setName(String name) {
+	Name = name;
+}
+public float getMonthlysalary() {
+	return monthlysalary;
+}
+public void setMonthlysalary(float monthlysalary) {
+	this.monthlysalary = monthlysalary;
+}
+public int getAge() {
+	return age;
+}
+public void setAge(int age) {
+	this.age = age;
+}
+}
